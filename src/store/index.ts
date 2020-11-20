@@ -1,12 +1,8 @@
 // REDUX GLOBAL STATE.
 import { createStore } from 'redux';
 
-const store = createStore(() => {
-    return {
-        id: 3,
-        name: 'Gui',
-        email: 'gui@icloud.com'
-    }
-});
+import rootReducer from './modules/rootReducer';
+
+const store = createStore(rootReducer);
 
 export default store;
