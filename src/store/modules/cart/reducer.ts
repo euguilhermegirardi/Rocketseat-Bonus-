@@ -11,6 +11,7 @@ const INITIAL_STATE: ICartState = {
 const cart: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
   // state = current state + draft = rascunho.
   return produce(state, draft => {
+
     switch(action.type) {
 
       case ActionTypes.addProductToCartSuccess: {
@@ -44,7 +45,9 @@ const cart: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
       default: {
         return draft;
       }
+
     }
+
   });
 }
 
