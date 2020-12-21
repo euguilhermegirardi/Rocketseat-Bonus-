@@ -31,13 +31,13 @@ const cart: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
             product,
             quantity: 1,
           });
-        }
+        };
 
         break;
       }
 
       case ActionTypes.addProductToCartFailure: {
-        draft.failedStockCheck.push(action.payload.productId)
+        draft.failedStockCheck.push(action.payload.productId);
 
         break;
       }
